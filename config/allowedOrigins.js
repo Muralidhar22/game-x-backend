@@ -1,3 +1,3 @@
-const allowedOrigins = ['http://localhost:3000', 'https://game-x-store.netlify.app']
+const allowedOrigins = ['http://localhost:5173', 'https://game-x-store.netlify.app']
 
 module.exports = allowedOrigins;
