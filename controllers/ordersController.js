@@ -21,9 +21,8 @@ const createNewOrder = async (req,res) => {
                             shippingAddress: {...req.body.shippingAddress},
                             billingAddress: {...req.body.billingAddress},
                             createdAt: {
-                                time:`${req.body.createdTime}`,
-                                date: `${req.body.createdDate}`
-                            } 
+                                timestamp: req.body.timestamp,
+                            }
                         }]
         })
         return res.json({ message: 'Order created successfully!', data:  { addedItem: _id }})
@@ -40,8 +39,7 @@ const createNewOrder = async (req,res) => {
             shippingAddress: {...req.body.shippingAddress},
             billingAddress: {...req.body.billingAddress},
             createdAt: {
-                time:`${req.body.createdTime}`,
-                date: `${req.body.createdDate}`
+                timestamp: req.body.timestamp,
             }
         }) 
         try{

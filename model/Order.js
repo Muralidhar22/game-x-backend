@@ -41,8 +41,7 @@ const orderSchema = new mongoose.Schema({
                 default: "pending"
             },
             createdAt: {
-                time: String,
-                date: String
+                timestamp: Number
             }
         }
     ]
