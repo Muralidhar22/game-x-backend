@@ -28,7 +28,7 @@ const handleLogin = async (req, res) => {
         res.cookie(`jwt`, refreshToken, { 
         httpOnly: true, // access only by webServer
         sameSite: 'None', //cross-site cookie
-        secure: false, //https
+        secure: true, //https
         maxAge: 24 * 60 * 60 * 1000 })
         res.json({ message: 'Successfully logged In',
                    data: { accessToken }
